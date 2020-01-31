@@ -23,6 +23,9 @@
 		"test": "node test.js",
 		"sbx": "node ./utils/sbx.js"
 	},
+	"bin": {
+		"wp-continuous-deployment": "./index.js"
+	},
 	"dependencies": {
 		"@sindresorhus/slugify": "^0.10.0",
 		"await-to-js": "^2.1.1",
