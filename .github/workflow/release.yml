@@ -1,0 +1,18 @@
+name: "🚀 RELEASE: To WordPress.org"
+on:
+  push:
+    tags:
+      - "*"
+jobs:
+  tag:
+    name: "🚀 RELEASE: To WordPress.org"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: WordPress Plugin Deploy
+        uses: 10up/actions-wordpress/dotorg-plugin-deploy@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: "asd-asda"
