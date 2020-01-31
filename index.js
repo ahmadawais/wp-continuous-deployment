@@ -7,19 +7,6 @@ process.on("unhandledRejection", err => {
 	console.log("err", err);
 });
 
-const welcome = require("cli-welcome");
-const pkg = require("./package.json");
+const welcome = require("./utils/welcome.js");
 
-// Use it.
-welcome(
-	`WP Continous Deployment`,
-	`
-by Awais.dev 👋`,
-	{
-		bgColor: `#FADC00`,
-		color: `#000000`,
-		bold: true,
-		clear: true,
-		version: `v${pkg.version}`
-	}
-);
+welcome();
