@@ -1,0 +1,24 @@
+{
+	"name": "wp-continuous-deployment",
+	"version": "0.0.1",
+	"description": "Continuous-Deployment for WordPress plugins with GitHub actions",
+	"license": "MIT",
+	"repository": "ahmadawais/wp-continuous-deployment",
+	"author": {
+		"name": "Ahmad Awais",
+		"email": "me@AhmadAwais.com",
+		"url": "https://twitter.com/MrAhmadAwais"
+	},
+	"main": "index.js",
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"wp-continuous-deployment",
+		"Ahmad Awais",
+		"ahmadawais"
+	],
+	"scripts": {
+		"test": "node test.js"
+	}
+}
