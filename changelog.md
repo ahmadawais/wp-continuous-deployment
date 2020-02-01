@@ -29,6 +29,19 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [0.3.0](https://github.com/ahmadawais/wp-continuous-deployment/compare/0.2.0...0.3.0)
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Extraneous [`0110d54`](https://github.com/ahmadawais/wp-continuous-deployment/commit/0110d54beebe502477e8893b2994c340c33a2c77) <br>
+> 🐛 Paths [`039b966`](https://github.com/ahmadawais/wp-continuous-deployment/commit/039b9663232fba76915747f175efe26b1c77838d) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [0.2.0](https://github.com/ahmadawais/wp-continuous-deployment/compare/0.1.0...0.2.0)
 
 ![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
@@ -42,6 +55,7 @@ I have released a video course to help you become a better developer — <a href
 
 ![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
 
+>  📖 Changelog update [`9e18d64`](https://github.com/ahmadawais/wp-continuous-deployment/commit/9e18d6427fc2c26b3cbcd81ad9e60639266c9a37) <br>
 > 📖 WIP [`548899f`](https://github.com/ahmadawais/wp-continuous-deployment/commit/548899fad3dfac9b8956ea272ef7aa826d59be86) <br>
 
 <br>
