@@ -7,23 +7,23 @@ process.on("unhandledRejection", err => {
 	console.log("err", err);
 });
 
+const fs = require("fs");
+const path = require("path");
 const chalk = require("chalk");
-const slugify = require("@sindresorhus/slugify");
-const handleError = require("./utils/handleError.js");
+const to = require("await-to-js").default;
+const makeDir = require("make-dir");
+const logSymbols = require("log-symbols");
+const handlebars = require("handlebars");
+handlebars.registerHelper("raw-helper", options => options.fn());
+const { Toggle, prompt } = require("enquirer");
+const handleError = require(path.join(__dirname, "./utils/handleError.js"));
+const welcome = require(path.join(__dirname, "./utils/welcome.js"));
+
+// Chalk.
 const green = chalk.bold.green;
 const red = chalk.bold.red;
 const yellow = chalk.bold.yellow;
 const dim = chalk.dim;
-const welcome = require("./utils/welcome.js");
-const to = require("await-to-js").default;
-const { Toggle, prompt } = require("enquirer");
-const makeDir = require("make-dir");
-const fs = require("fs");
-const path = require("path");
-const logSymbols = require("log-symbols");
-const clearConsole = require("clear-any-console");
-const handlebars = require("handlebars");
-handlebars.registerHelper("raw-helper", options => options.fn());
 
 const start = () => {
 	welcome();

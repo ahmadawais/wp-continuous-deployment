@@ -27,16 +27,16 @@
 		"wp-continuous-deployment": "./index.js"
 	},
 	"dependencies": {
-		"@sindresorhus/slugify": "^0.10.0",
 		"await-to-js": "^2.1.1",
 		"chalk": "^3.0.0",
-		"clear-any-console": "^1.16.0",
 		"cli-welcome": "^1.4.0",
 		"enquirer": "^2.3.4",
 		"handlebars": "^4.7.2",
-		"js-yaml": "^3.13.1",
 		"log-symbols": "^3.0.0",
 		"make-dir": "^3.0.0",
 		"ora": "^4.0.3"
+	},
+	"devDependencies": {
+		"clear-any-console": "^1.16.0"
 	}
 }
