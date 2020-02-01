@@ -9,10 +9,6 @@
 		"email": "me@AhmadAwais.com",
 		"url": "https://twitter.com/MrAhmadAwais"
 	},
-	"main": "index.js",
-	"files": [
-		"index.js"
-	],
 	"keywords": [
 		"wp-continuous-deployment",
 		"Ahmad Awais",
