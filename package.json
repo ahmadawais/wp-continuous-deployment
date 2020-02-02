@@ -1,6 +1,6 @@
 {
 	"name": "wp-continuous-deployment",
-	"version": "0.9.1",
+	"version": "0.9.2",
 	"description": "Continuous-Deployment for WordPress plugins with GitHub actions",
 	"license": "MIT",
 	"repository": "ahmadawais/wp-continuous-deployment",

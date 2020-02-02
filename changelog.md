@@ -29,11 +29,27 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [0.9.2](https://github.com/ahmadawais/wp-continuous-deployment/compare/0.9.1...0.9.2)
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Rename the build [`e0c0204`](https://github.com/ahmadawais/wp-continuous-deployment/commit/e0c02049797c6328a0317aef4817f77d640d8bd6) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [0.9.1](https://github.com/ahmadawais/wp-continuous-deployment/compare/0.9.0...0.9.1)
 
 ![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
 
 > 👌 Slug situation [`ed69f91`](https://github.com/ahmadawais/wp-continuous-deployment/commit/ed69f916f1edeb887663309bb96deb652c1b43b0) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+>  📖 Changelog update [`1e1e57a`](https://github.com/ahmadawais/wp-continuous-deployment/commit/1e1e57af01e1b2ce8e9af1f553e0b8ac1df300e0) <br>
 
 <br>
 
