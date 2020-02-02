@@ -1,23 +1,18 @@
-#!/usr/bin/env node
-
-// Makes the script crash on unhandled rejections instead of silently
-// ignoring them. In the future, promise rejections that are not handled will
-// terminate the Node.js process with a non-zero exit code.
-process.on("unhandledRejection", err => {
-	console.log("err", err);
-});
-
-const arrify = require("arrify");
-const axios = require("axios");
-const getUrls = require("get-urls");
-const fs = require("fs");
 const path = require("path");
+const axios = require("axios");
+const arrify = require("arrify");
+const getUrls = require("get-urls");
 const download = require("download");
+const to = require("await-to-js").default;
+const handleError = require("./handleError.js");
 const dest = path.resolve(__dirname, "./../.wordpress-org/");
 
-(async (slug = "jetpack") => {
+module.exports = async slug => {
 	const url = `https://plugins.svn.wordpress.org/${slug}/assets/`;
-	const res = await axios.get(url);
+	console.log("url: ", url);
+	const [errRes, res] = await to(axios.get(url));
+	handleError("FAILED ON ASSETS", errRes);
+
 	const urlData = res.data.replace(
 		/href="/g,
 		`href="https://plugins.svn.wordpress.org/jetpack/assets/`
@@ -35,4 +30,5 @@ const dest = path.resolve(__dirname, "./../.wordpress-org/");
 	const [errDown, down] = await to(
 		Promise.all(links.map(link => download(link, dest)))
 	);
-})();
+	handleError("FAILED ON FILE DOWNLOADS", errDown);
+};

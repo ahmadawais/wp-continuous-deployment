@@ -18,16 +18,22 @@
 		"wp-continuous-deployment": "./index.js"
 	},
 	"dependencies": {
+		"arrify": "^2.0.1",
 		"await-to-js": "^2.1.1",
+		"axios": "^0.19.2",
 		"chalk": "^3.0.0",
+		"cheerio": "^1.0.0-rc.3",
 		"cli-welcome": "^1.4.0",
+		"download": "^7.1.0",
 		"enquirer": "^2.3.4",
+		"get-urls": "^9.2.0",
 		"git-remote-origin-url": "^3.0.0",
 		"git-url-parse": "^11.1.2",
 		"handlebars": "^4.7.2",
 		"log-symbols": "^3.0.0",
 		"make-dir": "^3.0.0",
-		"ora": "^4.0.3"
+		"ora": "^4.0.3",
+		"request": "^2.88.0"
 	},
 	"devDependencies": {
 		"clear-any-console": "^1.16.0"

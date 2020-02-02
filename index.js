@@ -4,7 +4,7 @@
 // ignoring them. In the future, promise rejections that are not handled will
 // terminate the Node.js process with a non-zero exit code.
 process.on("unhandledRejection", err => {
-	console.log("err", err);
+	handleError(`UNHANDLED ERROR`, err);
 });
 
 const chalk = require("chalk");
@@ -18,6 +18,7 @@ const finishLine = require("./utils/finishLine.js");
 const handleTemplate = require("./utils/handleTemplate.js");
 const shouldCancel = require("./utils/shouldCancel.js");
 const exitClone = require("./utils/exitClone.js");
+const downloadAssets = require("./utils/downloadAssets.js");
 const gParse = require("git-url-parse");
 const dim = chalk.dim;
 handlebars.registerHelper("raw-helper", options => options.fn());
@@ -70,6 +71,7 @@ ${dim(`It's the last part of the URL, e.g.`)}`
 		gitHubUrl = url.url;
 	}
 
-	handleTemplate(slug);
+	handleTemplate(slug.slug);
+	await downloadAssets(slug.slug);
 	finishLine(gitHubUrl);
 })();
