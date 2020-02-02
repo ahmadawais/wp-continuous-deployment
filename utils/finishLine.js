@@ -22,6 +22,10 @@ Remember the username and password you use at https://login.WordPress.org?!
 		)} and fill the value with your password
 
 ${logSymbols.success} ${green(`Now what?!`)}
+- Make sure all plugin assets were downloaded to the ${green(
+			`.wordpress-org`
+		)} directory
+- Or manually download from ${dim(`https://ps.w.org/${slug.slug}/assets/`)}
 - Now for each commit/push to master your assets & readme will get deployed
 - And for each new tag/push a new version of plugin will be deployed
 - So, go ahead, make change, git commit, and then run:
