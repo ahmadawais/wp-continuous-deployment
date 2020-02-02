@@ -23,6 +23,7 @@
 		"cli-welcome": "^1.4.0",
 		"enquirer": "^2.3.4",
 		"git-remote-origin-url": "^3.0.0",
+		"git-url-parse": "^11.1.2",
 		"handlebars": "^4.7.2",
 		"log-symbols": "^3.0.0",
 		"make-dir": "^3.0.0",

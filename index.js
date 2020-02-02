@@ -10,15 +10,17 @@ process.on("unhandledRejection", err => {
 const chalk = require("chalk");
 const to = require("await-to-js").default;
 const handlebars = require("handlebars");
-handlebars.registerHelper("raw-helper", options => options.fn());
 const { Toggle, prompt } = require("enquirer");
+const gitRemoteOriginUrl = require("git-remote-origin-url");
 const handleError = require("./utils/handleError.js");
 const welcome = require("./utils/welcome.js");
 const finishLine = require("./utils/finishLine.js");
 const handleTemplate = require("./utils/handleTemplate.js");
 const shouldCancel = require("./utils/shouldCancel.js");
 const exitClone = require("./utils/exitClone.js");
+const gParse = require("git-url-parse");
 const dim = chalk.dim;
+handlebars.registerHelper("raw-helper", options => options.fn());
 
 (async () => {
 	welcome();
@@ -44,10 +46,30 @@ const dim = chalk.dim;
 		message: `What is your WordPress.org plugin slug?
 ${dim(`It's the last part of the URL, e.g.`)}`
 	};
-	const [errSelection, slug] = await to(prompt(promptSlug));
-	handleError(`FAILED ON SLUG`, errSelection);
+	const [errSlug, slug] = await to(prompt(promptSlug));
+	handleError(`FAILED ON SLUG`, errSlug);
 	await shouldCancel(slug);
 
+	// GitHub.
+	const getGitHubUrl = await gitRemoteOriginUrl();
+	const urlObj = getGitHubUrl ? gParse(getGitHubUrl) : false;
+	const gitHubUrl = urlObj
+		? `https://github.com/${urlObj.owner}/${urlObj.name}`
+		: false;
+
+	if (!gitHubUrl) {
+		const promptUrl = {
+			type: `input`,
+			name: `url`,
+			initial: `https://github.com/owner/repo`,
+			message: `What is your plugin GitHub repository URL?`
+		};
+		const [errUrl, url] = await to(prompt(promptUrl));
+		handleError(`FAILED ON GITHUB URL`, errUrl);
+		await shouldCancel(url);
+		gitHubUrl = url.url;
+	}
+
 	handleTemplate(slug);
-	finishLine();
+	finishLine(gitHubUrl);
 })();
