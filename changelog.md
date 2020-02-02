@@ -29,11 +29,27 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [0.9.0](https://github.com/ahmadawais/wp-continuous-deployment/compare/0.8.0...0.9.0)
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Docs [`de5d639`](https://github.com/ahmadawais/wp-continuous-deployment/commit/de5d6394512f4b12ef1159c3fcbc2e97003eeebd) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [0.8.0](https://github.com/ahmadawais/wp-continuous-deployment/compare/0.7.0...0.8.0)
 
 ![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
 
 > 🐛 Workflows directory [`0fb3fe2`](https://github.com/ahmadawais/wp-continuous-deployment/commit/0fb3fe2a836457e9e7f570045e261fae7cdbb324) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+>  📖 Changelog update [`5868483`](https://github.com/ahmadawais/wp-continuous-deployment/commit/5868483aad2017d373b76d5b9fe16ab0d1b159ee) <br>
 
 <br>
 
