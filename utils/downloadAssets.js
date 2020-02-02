@@ -25,10 +25,8 @@ module.exports = async slug => {
 		link => link !== `https://ps.w.org/${slug}/assets/languages`
 	);
 
-	console.log("links", links);
 	const [errDown, down] = await to(
 		Promise.all(links.map(link => download(link, dest)))
-		// Promise.all(links.map(link => new DownloaderHelper(link, dest)))
 	);
 	handleError("FAILED ON FILE DOWNLOADS", errDown);
 };
