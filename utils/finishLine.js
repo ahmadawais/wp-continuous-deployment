@@ -12,6 +12,7 @@ module.exports = url => {
 		)}
 
 ${logSymbols.info} ${yellow(`One-time setup:`)}
+Remember the username and password you use at https://login.WordPress.org?!
 ❯❯ Go to ${dim(`${url}/settings/secrets`)}
 1. Click "Add New Secret" add name ${green(
 			`SVN_USERNAME`

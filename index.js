@@ -7,6 +7,8 @@ process.on("unhandledRejection", err => {
 	handleError(`UNHANDLED ERROR`, err);
 });
 
+const ora = require("ora");
+const spinner = ora({ text: "" });
 const chalk = require("chalk");
 const to = require("await-to-js").default;
 const handlebars = require("handlebars");
@@ -21,6 +23,8 @@ const exitClone = require("./utils/exitClone.js");
 const downloadAssets = require("./utils/downloadAssets.js");
 const gParse = require("git-url-parse");
 const dim = chalk.dim;
+const yellow = chalk.bold.yellow;
+const green = chalk.bold.green;
 handlebars.registerHelper("raw-helper", options => options.fn());
 
 (async () => {
@@ -45,7 +49,9 @@ handlebars.registerHelper("raw-helper", options => options.fn());
 		name: `slug`,
 		initial: `cf7-customizer`,
 		message: `What is your WordPress.org plugin slug?\n${dim(
-			`It's the last part of the URL, e.g.`
+			`It's the last part of the URL, after ${dim(
+				`"https://wordpress.org/plugins/"`
+			)} e.g.`
 		)}`
 	};
 	const [errSlug, slug] = await to(prompt(promptSlug));
@@ -72,7 +78,12 @@ handlebars.registerHelper("raw-helper", options => options.fn());
 		gitHubUrl = url.url;
 	}
 
+	spinner.start(`${yellow(`GITHUB ACTIONS`)} creating…`);
 	handleTemplate(slug.slug);
+	spinner.succeed(`${green(`GITHUB ACTIONS`)} created`);
+	spinner.start(`${yellow(`ASSETS`)} downloading…`);
 	await downloadAssets(slug.slug);
+	spinner.succeed(`${green(`ASSETS`)} downloaded`);
+
 	finishLine(gitHubUrl);
 })();
