@@ -44,8 +44,9 @@ handlebars.registerHelper("raw-helper", options => options.fn());
 		type: `input`,
 		name: `slug`,
 		initial: `cf7-customizer`,
-		message: `What is your WordPress.org plugin slug?
-${dim(`It's the last part of the URL, e.g.`)}`
+		message: `What is your WordPress.org plugin slug?\n${dim(
+			`It's the last part of the URL, e.g.`
+		)}`
 	};
 	const [errSlug, slug] = await to(prompt(promptSlug));
 	handleError(`FAILED ON SLUG`, errSlug);
