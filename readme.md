@@ -23,9 +23,30 @@ npm install wp-continuous-deployment
 
 ## Usage
 
-```js
-const wpContinuousDeployment = require('wp-continuous-deployment');
+### BEFORE
+
+1. Put your WordPress plugin on GitHub
+2. Clone the GitHub repo in your PC and browse it with command line
+
+```sh
+npx wp-continuous-deployment
 ```
+
+1. Run `npx wp-console-deployment` in the root directory of the cloned repo
+2. Follow the instructions, set the slug of your plugin which is the last part of the URL, e.g., for my plugin https://wordpress.org/plugins/cf7-customizer/ the slug is `cf7-customizer`
+3. Add you WordPress.org SVN username/password (it's the same credentials you use for login.WordPress.org) in your plugin's GitHub repository settings.
+4. Go to `https://github.com/your-name/your-repo/settings/secrets` make sure to change the `your-name/your-repo` part.
+5. Click "Add New Secret" add name `SVN_USERNAME` and fill the value with your username
+6. Click "Add New Secret" again; add name `SVN_PASSWORD` and fill the value with your password
+
+### AFTER
+
+3. Download all plugin assets in the `.wordpress-org` directory
+4. Now for each commit/push to master your assets & readme will get deployed (provided there are no other files changed. If other files are changed the build will be canceled)
+5. And for each new tag/push a new version of plugin will be deployed
+6. So, go ahead, make changes, git commit, and then run: `git tag 2.0.0 && git push --tags` Considering 2.0.0 is the new version
+
+
 
 <br>
 
@@ -47,9 +68,9 @@ const wpContinuousDeployment = require('wp-continuous-deployment');
 
 [![📃](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/license.png)](./../../)
 
-## License & Conduct
+## License & Cond,`t
 
-- MIT © [Ahmad Awais](https://twitter.com/MrAhmadAwais/)
+- MIT © [Ahmad Awais](https:/,`witter.com/MrAhmadAwais/)
 - [Code of Conduct](code-of-conduct.md)
 
 <br>

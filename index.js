@@ -7,38 +7,21 @@ process.on("unhandledRejection", err => {
 	console.log("err", err);
 });
 
-const fs = require("fs");
-const path = require("path");
 const chalk = require("chalk");
 const to = require("await-to-js").default;
-const makeDir = require("make-dir");
-const logSymbols = require("log-symbols");
 const handlebars = require("handlebars");
 handlebars.registerHelper("raw-helper", options => options.fn());
 const { Toggle, prompt } = require("enquirer");
-const handleError = require(path.join(__dirname, "./utils/handleError.js"));
-const welcome = require(path.join(__dirname, "./utils/welcome.js"));
-
-// Chalk.
-const green = chalk.bold.green;
-const red = chalk.bold.red;
-const yellow = chalk.bold.yellow;
+const handleError = require("./utils/handleError.js");
+// const welcome = require("./utils/welcome.js");
+const finishLine = require("./utils/finishLine.js");
+const handleTemplate = require("./utils/handleTemplate.js");
+const shouldCancel = require("./utils/shouldCancel.js");
+const exitClone = require("./utils/exitClone.js");
 const dim = chalk.dim;
 
-const start = () => {
-	welcome();
-};
-
-// Exit gracefully if user trying to cancel.
-const shouldCancel = async action => {
-	if (action === undefined) {
-		console.log(yellow(`❯ Cancelled!\n`));
-		process.exit(0);
-	}
-};
-
 (async () => {
-	start();
+	// welcome();
 
 	// Root.
 	const promptClone = new Toggle({
@@ -47,24 +30,11 @@ const shouldCancel = async action => {
 	});
 
 	const [errClone, clone] = await to(promptClone.run());
-	handleError(`CLONE`, `Failed on clone`, errClone);
+	handleError(`FAILED ON CLONE`, errClone);
 	await shouldCancel(clone);
 
-	if (!clone) {
-		console.log(`${red(`${logSymbols.error} Nops. You're doing it wrong.`)}`);
-		console.log(
-			yellow(`
-${logSymbols.info} Follow these steps:
-
-1. Put your WordPress plugin on GitHub (https://repo.new)
-2. Clone the GitHub repo in your PC and browse it with command line
-3. Run ${green(
-				`npx wp-console-deployment`
-			)} in the root directory of the cloned repo
-`)
-		);
-		process.exit(0);
-	}
+	// Moving forward.
+	exitClone(clone);
 
 	// Slug.
 	const promptSlug = {
@@ -75,42 +45,9 @@ ${logSymbols.info} Follow these steps:
 ${dim(`It's the last part of the URL, e.g.`)}`
 	};
 	const [errSelection, slug] = await to(prompt(promptSlug));
-	handleError(`SLUG`, `Failed on slug`, errSelection);
+	handleError(`FAILED ON SLUG`, errSelection);
 	await shouldCancel(slug);
 
-	// Template & Directories.
-	const files = [`assets`, `release`];
-
-	for (file of files) {
-		const fileContents = fs.readFileSync(
-			path.join(__dirname, `./template/${file}.yml`),
-			`utf8`
-		);
-		const source = fileContents.toString();
-		const template = handlebars.compile(source);
-		const rendered = template({ slug: slug.slug });
-		await makeDir(`./.github/workflow/`);
-		await makeDir(`./.wordpress-org/`);
-		const done = fs.writeFileSync(
-			`./.github/workflow/${file}.yml`,
-			rendered,
-			`utf8`
-		);
-	}
-
-	// Final notice.
-	console.log(
-		chalk(`${logSymbols.success} ${green(`…and that was it.`)}
-
-${logSymbols.info} Next steps:
-
-0. Download all plugin assets in the ${green(`.wordpress-org`)} directory
-1. Now for each commit/push to master your assets & readme will get deployed
-2. And for each new tag/push a new version of plugin will be deployed
-3. So, go ahead, make change, git commit, and then run:
-
-${green(`git tag 2.0.0 && git push --tags`)}
-${dim(`# Considering 2.0.0 is the new version`)}
-`)
-	);
+	handleTemplate(slug);
+	finishLine();
 })();
