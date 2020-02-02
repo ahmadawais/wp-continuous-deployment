@@ -5,7 +5,7 @@ const green = chalk.bold.green;
 const yellow = chalk.bold.yellow;
 
 // Final notice.
-module.exports = url => {
+module.exports = (url, slug) => {
 	console.log(
 		chalk(`${logSymbols.success} ${green(`…and that was it.`)} ${yellow(
 			`Wait, a couple more things to set up`
@@ -25,7 +25,7 @@ ${logSymbols.success} ${green(`Now what?!`)}
 - Make sure all plugin assets were downloaded to the ${green(
 			`.wordpress-org`
 		)} directory
-- Or manually download from ${dim(`https://ps.w.org/${slug.slug}/assets/`)}
+- Or manually download from ${dim(`https://ps.w.org/${slug}/assets/`)}
 - Now for each commit/push to master your assets & readme will get deployed
 - And for each new tag/push a new version of plugin will be deployed
 - So, go ahead, make change, git commit, and then run:

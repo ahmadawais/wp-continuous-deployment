@@ -46,7 +46,7 @@ handlebars.registerHelper("raw-helper", options => options.fn());
 	// Slug.
 	const promptSlug = {
 		type: `input`,
-		name: `slug`,
+		name: `wpslug`,
 		initial: `cf7-customizer`,
 		message: `What is your WordPress.org plugin slug?\n${dim(
 			`It's the last part of the URL, after ${dim(
@@ -54,9 +54,10 @@ handlebars.registerHelper("raw-helper", options => options.fn());
 			)} e.g.`
 		)}`
 	};
-	const [errSlug, slug] = await to(prompt(promptSlug));
+	const [errSlug, wpslug] = await to(prompt(promptSlug));
 	handleError(`FAILED ON SLUG`, errSlug);
-	await shouldCancel(slug);
+	await shouldCancel(wpslug);
+	const slug = wpslug.wpslug;
 
 	// GitHub.
 	const getGitHubUrl = await gitRemoteOriginUrl();
@@ -79,12 +80,12 @@ handlebars.registerHelper("raw-helper", options => options.fn());
 	}
 
 	spinner.start(`${yellow(`GITHUB ACTIONS`)} creating…`);
-	handleTemplate(slug.slug);
+	handleTemplate(slug);
 	spinner.succeed(`${green(`GITHUB ACTIONS`)} created`);
 
 	spinner.start(`${yellow(`ASSETS`)} downloading…`);
-	await downloadAssets(slug.slug);
+	await downloadAssets(slug);
 	spinner.succeed(`${green(`ASSETS`)} downloaded`);
 
-	finishLine(gitHubUrl);
+	finishLine(gitHubUrl, slug);
 })();
