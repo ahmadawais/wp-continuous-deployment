@@ -14,7 +14,7 @@ module.exports = async slug => {
 		const source = fileContents.toString();
 		const template = handlebars.compile(source);
 		const rendered = template({ slug });
-		await makeDir(`./.github/workflow/`);
+		await makeDir(`./.github/workflows/`);
 		await makeDir(`./.wordpress-org/`);
 		const done = fs.writeFileSync(
 			`./.github/workflow/${file}.yml`,
