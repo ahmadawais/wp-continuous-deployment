@@ -13,7 +13,7 @@ const handlebars = require("handlebars");
 handlebars.registerHelper("raw-helper", options => options.fn());
 const { Toggle, prompt } = require("enquirer");
 const handleError = require("./utils/handleError.js");
-// const welcome = require("./utils/welcome.js");
+const welcome = require("./utils/welcome.js");
 const finishLine = require("./utils/finishLine.js");
 const handleTemplate = require("./utils/handleTemplate.js");
 const shouldCancel = require("./utils/shouldCancel.js");
@@ -21,7 +21,7 @@ const exitClone = require("./utils/exitClone.js");
 const dim = chalk.dim;
 
 (async () => {
-	// welcome();
+	welcome();
 
 	// Root.
 	const promptClone = new Toggle({
