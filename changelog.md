@@ -29,11 +29,30 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [0.7.0](https://github.com/ahmadawais/wp-continuous-deployment/compare/0.6.0...0.7.0)
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Docs grammar [`15202a0`](https://github.com/ahmadawais/wp-continuous-deployment/commit/15202a0decab1cb0c9b06dce1a0570fafd397794) <br>
+> 👌 Lingo [`5ab640b`](https://github.com/ahmadawais/wp-continuous-deployment/commit/5ab640b1a9c8976d702afd1c03aad02437f3975d) <br>
+> 👌 Syntax format [`9f03858`](https://github.com/ahmadawais/wp-continuous-deployment/commit/9f038580e7224a01b105481467f72aa51e512ea2) <br>
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Workflows [`1b79674`](https://github.com/ahmadawais/wp-continuous-deployment/commit/1b79674e79a2ad0d75271ddcd9471c292fbad20a) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [0.6.0](https://github.com/ahmadawais/wp-continuous-deployment/compare/0.5.0...0.6.0)
 
 ![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
 
 > 📖 New release docs [`a3d7e4e`](https://github.com/ahmadawais/wp-continuous-deployment/commit/a3d7e4e024441abec3a58ccb48051f2536160902) <br>
+>  📖 Changelog update [`d1de036`](https://github.com/ahmadawais/wp-continuous-deployment/commit/d1de03638f67888b5ac680cd89f4a8b87bcd808e) <br>
 
 <br>
 
