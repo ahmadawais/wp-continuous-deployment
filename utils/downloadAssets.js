@@ -3,7 +3,6 @@ const axios = require("axios");
 const arrify = require("arrify");
 const getUrls = require("get-urls");
 const download = require("download");
-const { DownloaderHelper } = require("node-downloader-helper");
 const to = require("await-to-js").default;
 const handleError = require("./handleError.js");
 const dest = path.resolve(__dirname, "./../.wordpress-org/");

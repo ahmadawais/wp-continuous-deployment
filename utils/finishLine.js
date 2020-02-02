@@ -12,12 +12,11 @@ module.exports = url => {
 		)}
 
 ${logSymbols.info} ${yellow(`One-time setup:`)}
-1. Download all plugin assets in the ${green(`.wordpress-org`)} directory
-2. Go to ${dim(`${url}/settings/secrets`)}
-Click "Add New Secret" add name ${green(
+❯❯ Go to ${dim(`${url}/settings/secrets`)}
+1. Click "Add New Secret" add name ${green(
 			`SVN_USERNAME`
 		)} and fill the value with your username
-Click "Add New Secret" again; add name ${green(
+2. Click "Add New Secret" again; add name ${green(
 			`SVN_PASSWORD`
 		)} and fill the value with your password
 
