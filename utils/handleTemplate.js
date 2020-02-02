@@ -17,7 +17,7 @@ module.exports = async slug => {
 		await makeDir(`./.github/workflows/`);
 		await makeDir(`./.wordpress-org/`);
 		const done = fs.writeFileSync(
-			`./.github/workflow/${file}.yml`,
+			`./.github/workflows/${file}.yml`,
 			rendered,
 			`utf8`
 		);
