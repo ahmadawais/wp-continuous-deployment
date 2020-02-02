@@ -29,11 +29,43 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [0.5.0](https://github.com/ahmadawais/wp-continuous-deployment/compare/0.4.0...0.5.0)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Download Assets [`47e977d`](https://github.com/ahmadawais/wp-continuous-deployment/commit/47e977d6b04b91e6f027e3f1e4d663f771bfd4d7) <br>
+> 📦 Automated GitHub Origin URL [`ead338a`](https://github.com/ahmadawais/wp-continuous-deployment/commit/ead338aa6296c0a9bb194c0abf629602c3e88f76) <br>
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Refactor [`a6186d0`](https://github.com/ahmadawais/wp-continuous-deployment/commit/a6186d0070e999249d067b6eee5abe02226e8711) <br>
+> 👌 Lingo [`72828a1`](https://github.com/ahmadawais/wp-continuous-deployment/commit/72828a15819b9ff73377f4a63182cb50b68dc2ff) <br>
+> 👌 Syntax format [`48f5fe7`](https://github.com/ahmadawais/wp-continuous-deployment/commit/48f5fe7acb0ae0cc07148248f4ef70d0c1ce9e8b) <br>
+> 👌 Refactor welcome [`79d6cc2`](https://github.com/ahmadawais/wp-continuous-deployment/commit/79d6cc24592bff549481ec7a1797a41a290d37ea) <br>
+> 👌 Clean logs [`a8c50a6`](https://github.com/ahmadawais/wp-continuous-deployment/commit/a8c50a6688789689c6b8e9111e03b4862e77b0f9) <br>
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Dynamic link [`bed5dbf`](https://github.com/ahmadawais/wp-continuous-deployment/commit/bed5dbf59e3e2f00174ec5c35167a24a2497ae55) <br>
+> 🐛 Extraneous [`d6dcb1d`](https://github.com/ahmadawais/wp-continuous-deployment/commit/d6dcb1da9ec028aab817b180855efa9c8c76bf4d) <br>
+> 🐛 Extraneous [`1ead08d`](https://github.com/ahmadawais/wp-continuous-deployment/commit/1ead08d6ce4bd091645ac14653f785cc924e7371) <br>
+> 🐛 Log [`ccd0637`](https://github.com/ahmadawais/wp-continuous-deployment/commit/ccd0637b0b276b2483f1b5917bd9018f404bdc3b) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [0.4.0](https://github.com/ahmadawais/wp-continuous-deployment/compare/0.3.0...0.4.0)
 
 ![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
 
 > 🐛 Files [`29199a0`](https://github.com/ahmadawais/wp-continuous-deployment/commit/29199a08781563e28f431aaa791f9be6b413504c) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+>  📖 Changelog update [`a061598`](https://github.com/ahmadawais/wp-continuous-deployment/commit/a061598c31595a3376b6474b799587149ab65969) <br>
 
 <br>
 
