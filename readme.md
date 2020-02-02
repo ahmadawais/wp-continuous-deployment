@@ -34,17 +34,18 @@ npm install wp-continuous-deployment
 npx wp-continuous-deployment
 ```
 
-1. Follow the instructions, set the slug of your plugin which is the last part of the URL, e.g., for my plugin wordpress.org/plugins/cf7-customizer/ the slug is `cf7-customizer`
-2. Add you WordPress.org SVN username/password (it's the same credentials you use for login.WordPress.org) in your plugin's GitHub repository settings.
-3. Go to `https://github.com/owner/repo/settings/secrets` make sure to change the `owner/repo` part.
-4. Click "Add New Secret" add name `SVN_USERNAME` and fill the value with your username
-5. Click "Add New Secret" again; add name `SVN_PASSWORD` and fill the value with your password
+- Follow the instructions, set the slug of your plugin which is the last part of the URL, e.g., for my plugin wordpress.org/plugins/cf7-customizer/ the slug is `cf7-customizer`
+- Add you WordPress.org SVN username/password (it's the same credentials you use for login.WordPress.org) in your plugin's GitHub repository settings.
+- Go to `https://github.com/owner/repo/settings/secrets` make sure to change the `owner/repo` part.
+
+1. Click "Add New Secret" add name `SVN_USERNAME` and fill the value with your username
+2. Click "Add New Secret" again; add name `SVN_PASSWORD` and fill the value with your password
 
 ### AFTER
 
 1. All your plugin assets must have been downloaded in the `.wordpress-org` directory
-2. Now for each commit/push to master your assets & readme will get deployed (provided there are no other files changed. If other files are changed the build will be canceled)
-3. And for each new tag/push a new version of plugin will be deployed
+2. Now for each commit/push to master your assets & readme will get deployed (provided there are no other files modified. If other files are changed the build will be canceled)
+3. And for each new tag/push, a new version of the plugin will be deployed
 4. So, go ahead, make changes, git commit, and then run: `git tag 2.0.0 && git push --tags` — considering 2.0.0 is the new version
 
 <br>
