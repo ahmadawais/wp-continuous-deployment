@@ -9,7 +9,6 @@ const dest = path.resolve(__dirname, "./../.wordpress-org/");
 
 module.exports = async slug => {
 	const url = `https://plugins.svn.wordpress.org/${slug}/assets/`;
-	console.log("url: ", url);
 	const [errRes, res] = await to(axios.get(url));
 	handleError("FAILED ON ASSETS", errRes);
 
