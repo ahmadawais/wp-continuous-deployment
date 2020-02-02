@@ -81,6 +81,7 @@ handlebars.registerHelper("raw-helper", options => options.fn());
 	spinner.start(`${yellow(`GITHUB ACTIONS`)} creating…`);
 	handleTemplate(slug.slug);
 	spinner.succeed(`${green(`GITHUB ACTIONS`)} created`);
+
 	spinner.start(`${yellow(`ASSETS`)} downloading…`);
 	await downloadAssets(slug.slug);
 	spinner.succeed(`${green(`ASSETS`)} downloaded`);
