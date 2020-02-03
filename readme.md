@@ -39,6 +39,8 @@ npx wp-continuous-deployment
 1. Click "Add New Secret" add name `SVN_USERNAME` and fill the value with your username
 2. Click "Add New Secret" again; add name `SVN_PASSWORD` and fill the value with your password
 
+![secrets](https://on.ahmda.ws/1e6409/c)
+
 ### AFTER
 
 1. All your plugin assets must have been downloaded in the `.wordpress-org` directory
