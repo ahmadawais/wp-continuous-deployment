@@ -29,6 +29,22 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [1.4.0](https://github.com/ahmadawais/wp-continuous-deployment/compare/1.3.0...1.4.0)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Deps update [`13890eb`](https://github.com/ahmadawais/wp-continuous-deployment/commit/13890eb71601517ec635e20d69f3f81966b57de7) <br>
+
+![👌 IMPROVE:](https://img.shields.io/badge/-IMPROVEMENT-gray.svg?colorB=39AA54)
+
+> 👌 Lingo [`84a1021`](https://github.com/ahmadawais/wp-continuous-deployment/commit/84a10219ea9b53b3a406c7fa57d8fa18862dc4ac) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [1.3.0](https://github.com/ahmadawais/wp-continuous-deployment/compare/1.2.0...1.3.0)
 
 ![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
@@ -42,6 +58,7 @@ I have released a video course to help you become a better developer — <a href
 
 ![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
 
+>  📖 Changelog update [`3571696`](https://github.com/ahmadawais/wp-continuous-deployment/commit/35716966deced7daed41366f4ea59618a05c1482) <br>
 > 📖 Lingo Format [`cb40880`](https://github.com/ahmadawais/wp-continuous-deployment/commit/cb40880042272a810e651c4acde57f5b1153be42) <br>
 > 📖 Lingo [`d510525`](https://github.com/ahmadawais/wp-continuous-deployment/commit/d510525a6141513bf59adb6fce86254d448a1805) <br>
 > 📖 Name [`4205a98`](https://github.com/ahmadawais/wp-continuous-deployment/commit/4205a986403066cca33423e014ca9987322af48b) <br>
