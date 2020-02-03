@@ -29,11 +29,40 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [1.3.0](https://github.com/ahmadawais/wp-continuous-deployment/compare/1.2.0...1.3.0)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Gif [`e436940`](https://github.com/ahmadawais/wp-continuous-deployment/commit/e436940b13c051065e526d86138e083efe80962a) <br>
+
+![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
+
+> 🐛 Typos [`ff02c14`](https://github.com/ahmadawais/wp-continuous-deployment/commit/ff02c14b89816529df7d4842a270571daabf990a) <br>
+> 🐛 Bad instruction [`9922e33`](https://github.com/ahmadawais/wp-continuous-deployment/commit/9922e336514c1e478d471c21fe8a0c5f5a459806) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Lingo Format [`cb40880`](https://github.com/ahmadawais/wp-continuous-deployment/commit/cb40880042272a810e651c4acde57f5b1153be42) <br>
+> 📖 Lingo [`d510525`](https://github.com/ahmadawais/wp-continuous-deployment/commit/d510525a6141513bf59adb6fce86254d448a1805) <br>
+> 📖 Name [`4205a98`](https://github.com/ahmadawais/wp-continuous-deployment/commit/4205a986403066cca33423e014ca9987322af48b) <br>
+> 📖 Gif or didn't happen [`f6eac9f`](https://github.com/ahmadawais/wp-continuous-deployment/commit/f6eac9fd483375b6c3c8e4ae0ccd3607b37cf769) <br>
+> 📖 Credits [`a6e5d12`](https://github.com/ahmadawais/wp-continuous-deployment/commit/a6e5d1285d703877d4c5959023188500869fc4b6) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [1.2.0](https://github.com/ahmadawais/wp-continuous-deployment/compare/1.1.0...1.2.0)
 
 ![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
 
 > 🐛 Extraneous logs and modules [`cd68d60`](https://github.com/ahmadawais/wp-continuous-deployment/commit/cd68d6087b1d2fff12e94251a3976a471f64a112) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+>  📖 Changelog update [`e01cec6`](https://github.com/ahmadawais/wp-continuous-deployment/commit/e01cec6b5187e70b57d15b2f1bc6aa1306bf1ea4) <br>
 
 <br>
 
