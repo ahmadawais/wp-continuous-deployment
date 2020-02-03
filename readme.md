@@ -69,6 +69,7 @@ npx wp-continuous-deployment
 ## License & Cond,`t
 
 - MIT © [Ahmad Awais](https:/,`witter.com/MrAhmadAwais/)
+- Thank you, 10up & Helen for the awesome GitHub actions
 - [Code of Conduct](code-of-conduct.md)
 
 <br>
