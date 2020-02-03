@@ -1,4 +1,3 @@
-const fs = require("fs");
 const path = require("path");
 const chalk = require("chalk");
 const axios = require("axios");
@@ -46,7 +45,6 @@ module.exports = async (slug, spinner) => {
 			Promise.all(
 				links.map(async (link, i) => {
 					await download(link, dest);
-					console.log("dest: ", dest);
 					spinner.start(
 						`${yellow(`ASSETS`)} downloading ${i + 1}/${links.length}…`
 					);
