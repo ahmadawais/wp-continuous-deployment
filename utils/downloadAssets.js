@@ -11,7 +11,7 @@ const to = require("await-to-js").default;
 const logSymbols = require("log-symbols");
 const handleError = require("./handleError.js");
 const isDirEmpty = require("is-dir-empty");
-const dest = path.resolve(__dirname, "./../.wordpress-org/");
+const dest = path.resolve(process.cwd(), "./../.wordpress-org/");
 
 module.exports = async (slug, spinner) => {
 	spinner.start(`${yellow(`ASSETS`)} finding…`);
