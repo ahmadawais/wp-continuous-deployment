@@ -38,8 +38,6 @@ npx wp-continuous-deployment
 - Add you WordPress.org SVN username/password (it's the same credentials you use for login.WordPress.org) in your plugin's GitHub repository settings.
 - Go to `https://github.com/owner/repo/settings/secrets` make sure to change the `owner/repo` part.
 
-1. Click **Add New Secret** add name `SVN_USERNAME` and fill the value with your username
-2. Click **Add New Secret** again; add name `SVN_PASSWORD` and fill the value with your password
 
 ![secrets](https://on.ahmda.ws/3a3b87/c)
 
@@ -70,9 +68,9 @@ npx wp-continuous-deployment
 
 [![📃](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/license.png)](./../../)
 
-## License & Cond,`t
+## License & Conduct
 
-- MIT © [Ahmad Awais](https:/,`witter.com/MrAhmadAwais/)
+- MIT © [Ahmad Awais](https://twitter.com/MrAhmadAwais/)
 - Thank you, 10up & Helen for the awesome GitHub actions
 - [Code of Conduct](code-of-conduct.md)
 
