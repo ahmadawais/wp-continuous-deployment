@@ -32,12 +32,14 @@ npm install wp-continuous-deployment
 npx wp-continuous-deployment
 ```
 
+### ONE-TIME SETUP
+
 - Follow the instructions, set the slug of your plugin which is the last part of the URL, e.g., for my plugin wordpress.org/plugins/cf7-customizer/ the slug is `cf7-customizer`
 - Add you WordPress.org SVN username/password (it's the same credentials you use for login.WordPress.org) in your plugin's GitHub repository settings.
 - Go to `https://github.com/owner/repo/settings/secrets` make sure to change the `owner/repo` part.
 
-1. Click "Add New Secret" add name `SVN_USERNAME` and fill the value with your username
-2. Click "Add New Secret" again; add name `SVN_PASSWORD` and fill the value with your password
+1. Click **Add New Secret** add name `SVN_USERNAME` and fill the value with your username
+2. Click **Add New Secret** again; add name `SVN_PASSWORD` and fill the value with your password
 
 ![secrets](https://on.ahmda.ws/1e6409/c)
 
