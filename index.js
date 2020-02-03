@@ -83,9 +83,6 @@ handlebars.registerHelper("raw-helper", options => options.fn());
 	handleTemplate(slug);
 	spinner.succeed(`${green(`GITHUB ACTIONS`)} created`);
 
-	spinner.start(`${yellow(`ASSETS`)} downloading…`);
-	await downloadAssets(slug);
-	spinner.succeed(`${green(`ASSETS`)} downloaded`);
-
-	finishLine(gitHubUrl, slug);
+	const hasAssets = await downloadAssets(slug, spinner);
+	finishLine(slug, gitHubUrl, hasAssets);
 })();
