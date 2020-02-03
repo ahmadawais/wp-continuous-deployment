@@ -6,7 +6,6 @@
 process.on("unhandledRejection", err => {
 	console.log("err", err);
 });
-
 const clearConsole = require("clear-any-console");
 
 (async () => {
