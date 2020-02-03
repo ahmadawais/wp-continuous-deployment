@@ -21,7 +21,7 @@ npm install wp-continuous-deployment
 
 ## Usage
 
-### BEFORE
+### ❯ BEFORE
 
 1. Make sure your plugin is on WordPress.org
 2. Put your WordPress plugin on GitHub
@@ -32,7 +32,7 @@ npm install wp-continuous-deployment
 npx wp-continuous-deployment
 ```
 
-### ONE-TIME SETUP
+### ❯ ONE-TIME SETUP
 
 - Follow the instructions, set the slug of your plugin which is the last part of the URL, e.g., for my plugin wordpress.org/plugins/cf7-customizer/ the slug is `cf7-customizer`
 - Add you WordPress.org SVN username/password (it's the same credentials you use for login.WordPress.org) in your plugin's GitHub repository settings.
@@ -43,7 +43,7 @@ npx wp-continuous-deployment
 
 ![secrets](https://on.ahmda.ws/3a3b87/c)
 
-### AFTER
+### ❯ AFTER
 
 1. All your plugin assets must have been downloaded in the `.wordpress-org` directory
 2. Now for each commit/push to master your assets & readme will get deployed (provided there are no other files modified. If other files are changed the build will be canceled)
