@@ -12,7 +12,7 @@
 ## Install
 
 ```sh
-npm install wp-continuous-deployment
+npx wp-continuous-deployment
 ```
 
 <br>
@@ -71,8 +71,8 @@ npx wp-continuous-deployment
 ## License & Conduct
 
 - MIT © [Ahmad Awais](https://twitter.com/MrAhmadAwais/)
-- Thank you, 10up & Helen for the awesome GitHub actions
 - [Code of Conduct](code-of-conduct.md)
+- Thank you, 10up & Helen for the awesome GitHub Actions
 
 <br>
 
