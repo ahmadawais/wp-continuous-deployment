@@ -33,7 +33,7 @@ handlebars.registerHelper("raw-helper", options => options.fn());
 	// Root.
 	const promptClone = new Toggle({
 		name: `clone`,
-		message: `Are you running this in the root directory of your WordPress plguin's GitHub repo clone?`
+		message: `Are you running this in the root directory of your WordPress plugin's GitHub repo clone?`
 	});
 
 	const [errClone, clone] = await to(promptClone.run());
@@ -71,7 +71,7 @@ handlebars.registerHelper("raw-helper", options => options.fn());
 			type: `input`,
 			name: `url`,
 			initial: `https://github.com/owner/repo`,
-			message: `What is your plugin GitHub repository URL?`
+			message: `What is your plugin's GitHub repository URL?`
 		};
 		const [errUrl, url] = await to(prompt(promptUrl));
 		handleError(`FAILED ON GITHUB URL`, errUrl);
