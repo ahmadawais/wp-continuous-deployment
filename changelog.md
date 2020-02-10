@@ -39,6 +39,10 @@ I have released a video course to help you become a better developer — <a href
 
 > 👌 Lingo [`84a1021`](https://github.com/ahmadawais/wp-continuous-deployment/commit/84a10219ea9b53b3a406c7fa57d8fa18862dc4ac) <br>
 
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+>  📖 Changelog update [`ebd2fe9`](https://github.com/ahmadawais/wp-continuous-deployment/commit/ebd2fe9302768b66a049594bcef950fb1dd56d5b) <br>
+
 <br>
 
 [![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
