@@ -4,11 +4,11 @@ const welcome = require("cli-welcome");
 module.exports = () => {
 	// Use it.
 	welcome(
-		`WP Continous Deployment`,
+		`WP Continuous Deployment`,
 		`
 by Awais.dev 👋`,
 		{
-			bgColor: `#FADC00`,
+			bgColor: `#d54e21`,
 			color: `#000000`,
 			bold: true,
 			clear: true,
