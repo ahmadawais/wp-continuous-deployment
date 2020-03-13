@@ -29,11 +29,28 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [1.7.0](https://github.com/ahmadawais/wp-continuous-deployment/compare/1.6.0...1.7.0)
+
+![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
+
+> 📦 Git test [`a54032c`](https://github.com/ahmadawais/wp-continuous-deployment/commit/a54032ceb30049ef581aa9280d688860ddcbf16e) <br>
+> 📦 Dir option [`06438b5`](https://github.com/ahmadawais/wp-continuous-deployment/commit/06438b59cefd75b7d915023ea638bd09c6d8b102) <br>
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [1.6.0](https://github.com/ahmadawais/wp-continuous-deployment/compare/1.5.1...1.6.0)
 
 ![🐛 FIX:](https://img.shields.io/badge/-FIX-gray.svg?colorB=ff6347)
 
 > 🐛 Typo + Brand color [`a4a38d5`](https://github.com/ahmadawais/wp-continuous-deployment/commit/a4a38d5b3b907d34377cbc25e616870f26bcad14) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog update [`283ef0b`](https://github.com/ahmadawais/wp-continuous-deployment/commit/283ef0be72981d2f9da273028e522eb8300661b8) <br>
 
 <br>
 
