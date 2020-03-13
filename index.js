@@ -3,29 +3,30 @@
 // Makes the script crash on unhandled rejections instead of silently
 // ignoring them. In the future, promise rejections that are not handled will
 // terminate the Node.js process with a non-zero exit code.
-process.on("unhandledRejection", err => {
+process.on('unhandledRejection', err => {
 	handleError(`UNHANDLED ERROR`, err);
 });
 
-const ora = require("ora");
-const spinner = ora({ text: "" });
-const chalk = require("chalk");
-const to = require("await-to-js").default;
-const handlebars = require("handlebars");
-const { Toggle, prompt } = require("enquirer");
-const gitRemoteOriginUrl = require("git-remote-origin-url");
-const handleError = require("./utils/handleError.js");
-const welcome = require("./utils/welcome.js");
-const finishLine = require("./utils/finishLine.js");
-const handleTemplate = require("./utils/handleTemplate.js");
-const shouldCancel = require("./utils/shouldCancel.js");
-const exitClone = require("./utils/exitClone.js");
-const downloadAssets = require("./utils/downloadAssets.js");
-const gParse = require("git-url-parse");
+const ora = require('ora');
+const spinner = ora({ text: '' });
+const chalk = require('chalk');
+const to = require('await-to-js').default;
+const handlebars = require('handlebars');
+const { Toggle, prompt } = require('enquirer');
+const gitRemoteOriginUrl = require('git-remote-origin-url');
+const handleError = require('./utils/handleError.js');
+const welcome = require('./utils/welcome.js');
+const finishLine = require('./utils/finishLine.js');
+const handleTemplate = require('./utils/handleTemplate.js');
+const shouldCancel = require('./utils/shouldCancel.js');
+const exitClone = require('./utils/exitClone.js');
+const downloadAssets = require('./utils/downloadAssets.js');
+const gParse = require('git-url-parse');
+const isItGit = require('is-it-git');
 const dim = chalk.dim;
 const yellow = chalk.bold.yellow;
 const green = chalk.bold.green;
-handlebars.registerHelper("raw-helper", options => options.fn());
+handlebars.registerHelper('raw-helper', options => options.fn());
 
 (async () => {
 	welcome();
@@ -42,6 +43,7 @@ handlebars.registerHelper("raw-helper", options => options.fn());
 
 	// Moving forward.
 	exitClone(clone);
+	exitClone(isItGit());
 
 	// Slug.
 	const promptSlug = {
@@ -49,9 +51,7 @@ handlebars.registerHelper("raw-helper", options => options.fn());
 		name: `wpslug`,
 		initial: `cf7-customizer`,
 		message: `What is your WordPress.org plugin slug?\n${dim(
-			`It's the last part of the URL, after ${dim(
-				`"https://wordpress.org/plugins/"`
-			)} e.g.`
+			`It's the last part of the URL, after ${dim(`"https://wordpress.org/plugins/"`)} e.g.`
 		)}`
 	};
 	const [errSlug, wpslug] = await to(prompt(promptSlug));
@@ -62,9 +62,7 @@ handlebars.registerHelper("raw-helper", options => options.fn());
 	// GitHub.
 	const getGitHubUrl = await gitRemoteOriginUrl();
 	const urlObj = getGitHubUrl ? gParse(getGitHubUrl) : false;
-	const gitHubUrl = urlObj
-		? `https://github.com/${urlObj.owner}/${urlObj.name}`
-		: false;
+	const gitHubUrl = urlObj ? `https://github.com/${urlObj.owner}/${urlObj.name}` : false;
 
 	if (!gitHubUrl) {
 		const promptUrl = {
