@@ -29,12 +29,24 @@ I have released a video course to help you become a better developer — <a href
 
 <br>
 
+### RELEASE: [1.7.1](https://github.com/ahmadawais/wp-continuous-deployment/compare/1.7.0...1.7.1)
+
+<br>
+
+[![hr](https://raw.githubusercontent.com/ahmadawais/stuff/master/images/git/hr.png)](/)
+
+<br>
+
 ### RELEASE: [1.7.0](https://github.com/ahmadawais/wp-continuous-deployment/compare/1.6.0...1.7.0)
 
 ![📦 NEW:](https://img.shields.io/badge/-NEW-gray.svg?colorB=3778FF)
 
 > 📦 Git test [`a54032c`](https://github.com/ahmadawais/wp-continuous-deployment/commit/a54032ceb30049ef581aa9280d688860ddcbf16e) <br>
 > 📦 Dir option [`06438b5`](https://github.com/ahmadawais/wp-continuous-deployment/commit/06438b59cefd75b7d915023ea638bd09c6d8b102) <br>
+
+![📖 DOC:](https://img.shields.io/badge/-DOCS-gray.svg?colorB=978CD4)
+
+> 📖 Changelog update [`0a8c652`](https://github.com/ahmadawais/wp-continuous-deployment/commit/0a8c6520524fc5b03d392d72b07c41cc9bc6ddda) <br>
 
 <br>
 
